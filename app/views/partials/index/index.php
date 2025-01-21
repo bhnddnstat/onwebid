@@ -26,7 +26,7 @@
                             <div class=""><div class="opening text-center">
                                 <h5>Solusi Digital untuk Kebutuhan Anda!</h5> <br>
                                     <p class="text-justify">
-                                        Kami menyediakan berbagai layanan digital mulai dari pembuatan website untuk sekolah, usaha, dan pemerintahan hingga toko online, undangan digital, website PPOB & SMM, sistem absensi online, website penerimaan peserta didik baru (PPDB), layanan hosting RDM Madrasah, ujian online berbasis Computer Based Test (CBT) untuk semua jenjang sekolah atau madrasah, dan masih banyak lagi. Temukan layanan yang tepat untuk Anda dan nikmati kemudahan serta keandalan teknologi digital bersama kami.
+                                        Menyediakan berbagai layanan digital mulai dari pembuatan website untuk sekolah, usaha, dan pemerintahan hingga toko online, undangan digital, website PPOB & SMM, sistem absensi online, website penerimaan peserta didik baru (PPDB), layanan hosting RDM Madrasah, ujian online berbasis Computer Based Test (CBT) untuk semua jenjang sekolah atau madrasah, dan berbagai jenis layanan lainnya.
                                     </p>
                                 </div>
                             </div>
@@ -162,19 +162,27 @@
                                                         document.head.appendChild(link);
                                                     </script>
                                                 </div>
-                                                </div><div class=""><div>
+                                                </div>
+                                                
+                                            <div class="">
                                                 <div>
                                                     <button class="whatsapp-button" id="whatsapp-button">
-                                                    <i class="fab fa-whatsapp"></i>Bantuan</button>
+                                                    <i class="fab fa-whatsapp"></i> Bantuan</button>
                                                 </div>
                                                 <script>
-                                                    var link = document.createElement('link');
-                                                    link.rel = 'stylesheet';
-                                                    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
-                                                    document.head.appendChild(link);
-                                                    document.getElementById('whatsapp-button').onclick = function() {
-                                                    window.location.href = 'https://wa.me/+6281255173749';
-                                                    };
+                                                    if (!document.querySelector('link[href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"]')) {
+                                                        var newLink = document.createElement('link');
+                                                        newLink.rel = 'stylesheet';
+                                                        newLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+                                                        document.head.appendChild(newLink);
+                                                    }
+                                                    
+                                                    document.getElementById('whatsapp-button').addEventListener('click', function() {
+                                                        var phoneNumber = '6282197028450';
+                                                        var defaultMessage = 'Halo, saya ingin konfirmasi pesanan atas nama: ';
+                                                        var whatsappUrl = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(defaultMessage);
+                                                        window.open(whatsappUrl, '_blank');
+                                                    });
                                                 </script>
                                             </div>
                                         </div>
